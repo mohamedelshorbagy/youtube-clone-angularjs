@@ -10,5 +10,6 @@ angular.module('HomeModule')
                 $scope.photos = response.data;
                 console.log(response.data);
             });
+            $scope.testLiveServer = "Test For Live Server";
         }
     })

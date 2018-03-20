@@ -1,0 +1,16 @@
+$green: rgb(42 , 204 , 113);
+$blue: rgb(52 , 152 , 220);
+$red: rgb(231,70,67);
+$white: white;
+$mb: 30px;
+body {
+    background-color: $white;
+}
+
+h1 , p , span {
+    background-color: $white;
+}
+
+.card {
+    margin-bottom: $mb;
+}
