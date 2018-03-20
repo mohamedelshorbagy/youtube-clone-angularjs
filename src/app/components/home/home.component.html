@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md" ng-repeat="photo in photos">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ photo.url }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ photo.id }}</h5>
+                    <p class="card-text">{{ post.title }}</p>
+                    <a href="#" class="btn btn-primary">See More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
