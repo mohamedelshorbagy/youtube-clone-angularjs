@@ -1,8 +1,7 @@
-$green: rgb(42 , 204 , 113);
-$blue: rgb(52 , 152 , 220);
-$red: rgb(231,70,67);
-$white: white;
-$mb: 30px;
+@import './basic_setup/variables';
+@import './basic_setup/grid';
+@import './basic_setup/normalize';
+
 body {
     background-color: $white;
 }

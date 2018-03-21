@@ -7,5 +7,9 @@ angular.module('youtubeClone' , [
 
     // Components
     'HomeModule',
-    'NavbarModule'
+    'NavbarModule',
+    'YoutubeLogoModule',
+    // Services
+    'SearchModule',
+    'VideoDetailsModule'
 ]);

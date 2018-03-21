@@ -2,4 +2,4 @@
 
 
 
-angular.module('HomeModule' , []);
+angular.module('HomeModule' , ['SearchModule','VideoDetailsModule']);

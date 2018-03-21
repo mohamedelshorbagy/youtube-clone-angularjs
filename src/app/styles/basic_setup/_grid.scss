@@ -1,0 +1,51 @@
+@import './variables';
+.container {
+    width: calc(100% - 10em);
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+%grid {
+    box-sizing: border-box;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+}
+
+
+// @for $i from 1 through 12 {
+//     .col-#{$i} {
+//         width: (100% / ($gridNum / $i));
+//         padding: 10px;
+//         margin: 10px;
+//     }
+// }
+
+// Grid Using FlexBox
+@for $i from 1 through $cols {
+    .col-#{$i} {
+        flex: 0 0 (100% / ($cols * $i));
+        @extend %grid;
+    }
+    .col-offset-#{$i} {
+        margin-left: (100% / ($cols * $i));
+        @extend %grid;
+    }
+}
+
+
+@mixin grid($cols , $mgn) {
+    float: left;
+    margin-left: #{$mgn}px;
+    margin-right: #{$mgn}px;
+    padding: 10px;
+    width: ((100% - (($cols - 1) * $mgn)) / $cols);
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+}
