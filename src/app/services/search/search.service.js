@@ -13,6 +13,7 @@ angular.module('SearchModule')
                 part: 'snippet, id',
                 q: search,
                 type: 'video',
+                'maxResults': '10',
                 key: apiKey
             };
             return $http({

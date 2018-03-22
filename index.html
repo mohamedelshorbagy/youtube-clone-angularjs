@@ -2,25 +2,21 @@
 <html lang="en" ng-app="youtubeClone">
 
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Youtube</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="src/app/app.css">
 </head>
 
 <body>
     <app-navbar></app-navbar>
-    <hr>
-    <input type="text" ng-model="search" class="form-control">
-    <div class="container">
-        <p class="lead text-center">{{ search }}</p>
-    </div>
-    <hr>
-    <app-home></app-home>
-    <youtube-logo></youtube-logo>
-
+    <!-- <app-home></app-home> -->
+    <!-- <app-search-page></app-search-page> -->
+    <!-- <a ui-sref="searchPage({ search: 'avengers' })">Search</a> -->
+    <div ui-view></div>
 
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
@@ -34,6 +30,8 @@
     <script src="src/app/components/navbar/navbar.component.js"></script>
     <script src="src/app/components/youtube-logo/youtube-logo.module.js"></script>
     <script src="src/app/components/youtube-logo/youtube-logo.component.js"></script>
+    <script src="src/app/components/search-page/search-page.module.js"></script>
+    <script src="src/app/components/search-page/search-page.component.js"></script>
 
     <!-- Services -->
     <!-- Search Service -->

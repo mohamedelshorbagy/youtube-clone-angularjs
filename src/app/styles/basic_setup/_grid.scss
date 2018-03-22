@@ -12,9 +12,9 @@
 
 %grid {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-
 }
 
 
@@ -29,11 +29,11 @@
 // Grid Using FlexBox
 @for $i from 1 through $cols {
     .col-#{$i} {
-        flex: 0 0 (100% / ($cols * $i));
+        flex: 0 0 100% / $cols * $i;
         @extend %grid;
     }
     .col-offset-#{$i} {
-        margin-left: (100% / ($cols * $i));
+        margin-left: 100% / $cols * $i;
         @extend %grid;
     }
 }
