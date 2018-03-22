@@ -14,6 +14,10 @@ angular.module('youtubeClone')
                 url: '/search/:search',
                 component: 'appSearchPage'
             })
+            .state('videoPage', {
+                url: '/video/:id',
+                component: 'appVideo'
+            })
             .state('not-found', {
                 url: '/not-found',
                 template: '<p class="text-center">404</p>'

@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('VideoDetailsModule')
+angular.module('VideoDetailsService')
     .factory('VideoDetails', function ($http) {
         var apiKey = 'AIzaSyAFoq3vF1oF-v0qDm6XmWS7-h7kQB8Gpk8';
         let VideoDetails = {};

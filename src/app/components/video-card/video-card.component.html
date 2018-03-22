@@ -1,0 +1,13 @@
+<div class="video-card">
+    <div class="video-left">
+        <img src="{{ $ctrl.snippet.thumbnails.high.url }}" alt="$ctrl.snippet.title" ng-click="goToVideo($ctrl.item.id.videoId)">
+    </div>
+    <div class="video-right">
+        <h4 class="title" ng-click="goToVideo($ctrl.item.id.videoId)">{{ $ctrl.snippet.title }}</h4>
+        <div class="video-list">
+            <small class="item channel-title">{{ $ctrl.snippet.channelTitle }}</small>
+            <small class="item video-published">{{ transformDate($ctrl.snippet.publishedAt) }}</small>
+        </div>
+        <small>{{ $ctrl.snippet.description }}</small>
+    </div>
+</div>

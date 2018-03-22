@@ -2,7 +2,7 @@
 
 angular.module('HomeModule')
     .component('appHome', {
-        templateUrl: 'src/app/components/home/home.component.html',
+        template: '<p>{{ $ctrl.text }}</p><p>{{ $ctrl.name }}</p>',
         controllerAs: 'homeController',
         controller: function (VideoDetails, Search, $scope) {
 

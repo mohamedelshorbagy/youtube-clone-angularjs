@@ -55,42 +55,76 @@ body {
         .col-10 {
             margin-bottom: 15px;
         }
-        .btn-load-more {
-            border: 1px solid #888;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: white;
-            margin-bottom: 20px;
-            margin-left: 50%;
-            transform: translateX(-50%);
-        }
-        .video {
-            display: flex;
-            justify-content: space-between;
-        }
-        .video-left {
-            img {
-                width: 264px;
-                padding: 3px;
-                height: 100%;
+    }
+}
+
+.btn-load-more {
+    border: 1px solid #888;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.video-card {
+    display: flex;
+}
+.video-left {
+    img {
+        width: 264px;
+        padding: 3px;
+        height: 100%;
+        cursor: pointer;
+    }
+}
+.video-right {
+    margin-left: 12px;
+    margin-top: 5px;
+    h4 {
+        margin:0;
+        margin-bottom: 5px;
+        color: #555;
+        cursor: pointer;                
+    }
+    .video-list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    small {
+     color: #888;   
+    }
+}
+
+.video-details {
+    .container {
+            iframe {
+                width: 100%;
+                margin-left: 50%;
+                transform: translateX(-50%);
             }
-        }
-        .video-right {
-            margin-left: 12px;
-            margin-top: 5px;
-            h4 {
-                margin:0;
-                margin-bottom: 5px;
-                color: #555
-            }
-            .video-list {
+            .col-6 {
                 display: flex;
-                justify-content: space-between;
-                margin-bottom: 15px;
+                justify-content: space-around;
+                align-items: center;
+                .fa {
+                    color: #888;
+                    cursor: pointer;
+                    &:hover {
+                       color: #555; 
+                    }
+                }
+                span {
+                    color: #555;
+                }
             }
-            small {
-             color: #888;   
+            .row {
+                .col-10 {
+                    margin-bottom: 15px;
+                }
             }
-        }
     }
 }

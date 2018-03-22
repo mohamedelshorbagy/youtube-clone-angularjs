@@ -1,0 +1,44 @@
+<div class="video-details">
+    <div class="container" ng-if="id">
+        <iframe height="450" src="{{ youtubeLink }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="details" ng-if="data">
+            <h4>{{ data.snippet.title }}</h4>
+            <div class="row">
+                <div class="col-3">
+                    <p>{{ data.statistics.viewCount }} Watching Now</p>
+                </div>
+                <div class="col-offset-3 col-6">
+                    <div class="video-icons">
+                        <i class="fa fa-thumbs-up"></i>
+                        <span>{{ transformNumber(data.statistics.likeCount) }}</span>
+                    </div>
+                    <div class="item item-dislikes">
+                        <i class="fa fa-thumbs-down"></i>
+                        <span>{{ transformNumber(data.statistics.dislikeCount) }}</span>
+                    </div>
+                    <div class="item item-share">
+                        <i class="fa fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="item item-plus">
+                        <i class="fa fa-align-justify"></i>
+                    </div>
+                    <div class="item item-share">
+                        <i class="fa fa-ellipsis-h"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row" ng-if="related">
+            <div class="col-10" ng-repeat="item in related | limitTo:limit">
+                        <app-card-video
+                        snippet="item.snippet"
+                        item="item"
+                    ></app-card-video>
+            </div>
+        </div>
+        <div class="loader" ng-if="spinning"></div>
+        <button class="btn-load-more" ng-if="!spinning" ng-click="loadMore()">Load More</button>
+    </div>
+</div>

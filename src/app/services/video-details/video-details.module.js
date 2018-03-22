@@ -2,4 +2,4 @@
 
 
 
-angular.module('VideoDetailsModule', []);
+angular.module('VideoDetailsService', []);

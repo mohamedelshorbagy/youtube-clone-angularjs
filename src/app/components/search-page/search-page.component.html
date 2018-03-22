@@ -5,21 +5,11 @@
 <div class="search-results">
     <div class="container">
         <div class="row">
-            <div class="col-10" ng-repeat="item in data.items | limitTo:limit">
-                <div class="video">
-                    <div class="video-left">
-                        <img src="{{ item.snippet.thumbnails.high.url }}" alt="item.snippet.title">
-                        <!-- <div class="video-duration">{{ getDuration(item.id.videoId) }}</div> -->
-                    </div>
-                    <div class="video-right">
-                        <h4 class="title">{{ item.snippet.title }}</h4>
-                        <div class="video-list">
-                            <small class="item channel-title">{{ item.snippet.channelTitle }}</small>
-                            <small class="item video-published">{{ transformDate(item.snippet.publishedAt) }}</small>
-                        </div>
-                        <small>{{ item.snippet.description }}</small>
-                    </div>
-                </div>
+            <div class="col-10" ng-repeat="item in items | limitTo:limit">
+                <app-card-video
+                    snippet="item.snippet"
+                    item="item"
+                ></app-card-video>
             </div>
         </div>
         <div class="loader" ng-if="spinning"></div>

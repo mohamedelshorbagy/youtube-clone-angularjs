@@ -7,15 +7,25 @@ angular.module('SearchModule')
         var baseUrl = 'https://www.googleapis.com/youtube/v3/search';
         var apiKey = 'AIzaSyAFoq3vF1oF-v0qDm6XmWS7-h7kQB8Gpk8';
         let Search = {};
-        Search.getSearchedText = function (search = "") {
-            var options = {
-                maxResults: '25',
-                part: 'snippet, id',
-                q: search,
-                type: 'video',
-                'maxResults': '25',
-                key: apiKey
-            };
+        Search.getSearchedText = function (search = "", nextPageToken = "") {
+            var options;
+            if (nextPageToken !== "") {
+                options = {
+                    part: 'snippet, id',
+                    q: search,
+                    type: 'video',
+                    pageToken: nextPageToken,
+                    key: apiKey
+                };
+            } else {
+                options = {
+                    maxResults: '25',
+                    part: 'snippet, id',
+                    q: search,
+                    type: 'video',
+                    key: apiKey
+                };
+            }
             return $http({
                 method: 'get',
                 url: baseUrl,

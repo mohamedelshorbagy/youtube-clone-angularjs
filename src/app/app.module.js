@@ -9,8 +9,10 @@ angular.module('youtubeClone', [
     'HomeModule',
     'NavbarModule',
     'YoutubeLogoModule',
+    'VideoCardModule',
     'SearchPageModule',
+    'VideoDetailsModule',
     // Services
     'SearchModule',
-    'VideoDetailsModule'
+    'VideoDetailsService'
 ]);
