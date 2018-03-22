@@ -55,6 +55,15 @@ body {
         .col-10 {
             margin-bottom: 15px;
         }
+        .btn-load-more {
+            border: 1px solid #888;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white;
+            margin-bottom: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
         .video {
             display: flex;
             justify-content: space-between;

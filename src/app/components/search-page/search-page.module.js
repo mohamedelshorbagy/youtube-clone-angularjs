@@ -1,4 +1,4 @@
 'use strict';
 
 
-angular.module('SearchPageModule', ['SearchModule']);
+angular.module('SearchPageModule', ['SearchModule','VideoDetailsModule']);
