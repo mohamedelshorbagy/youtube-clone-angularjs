@@ -2,53 +2,14 @@
 @import './basic_setup/grid';
 @import './basic_setup/normalize';
 @import './basic_setup/basic_classes';
+@import './basic_setup/navbar';
+@import './basic_setup/video-card';
+@import './basic_setup/video-details';
 
 
 body {
     background-color: #fafafa;
 }
-
-
-.navbar.navbar-youtube {
-    box-shadow: 0 0 1px 1px rgba(20 , 23 , 28 , 0.1), 0 3px 1px 0 rgba(20,23,28,0.1);
-    padding: 10px;
-    margin-bottom: 30px;
-    background-color: white;
-    .form-group-search {
-        display: flex;
-        .search-holder {
-            border: 1px solid #EEE;
-            border-right: none;
-            padding: 2px 6px;
-            border-radius: 2px 0 0 2px;
-            box-shadow: inset 0 1px 2px #EEE;
-            width: 65%;
-        }
-        .form-control {
-            box-shadow: 0;
-            border: none;
-            flex: 1;
-            width: 100%;
-            outline: none;
-            margin-left: 4px;
-            width: 100%;
-            height: 100%;
-        }
-        .btn.btn-search {
-            width: 65px;
-            height: 40px;
-            border-radius: 0 2px 2px 0;
-            background-color: #EEE;
-            border: 1px solid #DDD;
-        }
-    }
-    img.youtube-logo {
-        width: 80px;
-        margin-top: 13px;
-    }
-    
-}
-
 
 .search-results {
     .container {
@@ -68,104 +29,3 @@ body {
     transform: translateX(-50%);
 }
 
-
-.video-card {
-    display: flex;
-}
-.video-left {
-    img {
-        width: 264px;
-        padding: 3px;
-        height: 100%;
-        cursor: pointer;
-    }
-}
-.video-right {
-    margin-left: 12px;
-    margin-top: 5px;
-    h4 {
-        margin:0;
-        margin-bottom: 5px;
-        color: #555;
-        cursor: pointer;                
-    }
-    .video-list {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-    }
-    small {
-     color: #888;   
-    }
-}
-
-.video-details {
-    .container {
-        background-color: white;
-            hr {
-                border: 0.5px solid #DDD;
-                width: 96%;
-            }
-            iframe {
-                width: 100%;
-                margin-left: 50%;
-                transform: translateX(-50%);
-            }
-            .col-6 {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                .fa {
-                    color: #888;
-                    cursor: pointer;
-                    &:hover {
-                       color: #555; 
-                    }
-                }
-                span {
-                    color: #555;
-                }
-            }
-            .row {
-                .col-10 {
-                    margin-bottom: 15px;
-                }
-            }
-            .channel-data {
-                padding: 10px;
-                margin-bottom: 15px;
-            }
-            .row {
-                .col-5 {
-                    .item {
-                        margin-top: 10px;
-                        p {
-                            margin:0;
-                            margin-bottom: 3px;
-                            &:hover {
-                                text-decoration: underline;
-                                cursor: pointer;
-                            }
-                        }
-
-                        span {
-                            font-size: 12px;
-                        }
-                    }
-                    
-                }
-                .col-2 {
-                    .img-color {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border-radius: 50%;
-                        background-color: $green;
-                        width: 60px;
-                        height: 60px;
-                        cursor: pointer;
-                    }
-                }
-            }
-    }
-}

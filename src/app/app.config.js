@@ -2,7 +2,7 @@
 
 angular.module('youtubeClone')
     .config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
-        $urlRouterProvider.otherwise('/not-found');
+        $urlRouterProvider.otherwise('/search/');
         // $locationProvider.html5Mode(true);
 
         $stateProvider
