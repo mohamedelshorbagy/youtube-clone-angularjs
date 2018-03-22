@@ -18,6 +18,10 @@ angular.module('youtubeClone')
                 url: '/video/:id',
                 component: 'appVideo'
             })
+            .state('channelPage',{
+                url: '/channel/:id',
+                component: 'appChannel'
+            })
             .state('not-found', {
                 url: '/not-found',
                 template: '<p class="text-center">404</p>'

@@ -16,6 +16,7 @@ angular.module('SearchPageModule')
             $scope.getSearched = function () {
                 Search.getSearchedText($scope.search, $scope.nextPageToken).then(res => {
                     $scope.spinning = true;
+                    console.log(res);
                     if (res['status'] === 200) {
                         $scope.items = $scope.items.concat(res.data.items);
                         $scope.nextPageToken = res.data.nextPageToken;

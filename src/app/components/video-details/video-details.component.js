@@ -14,6 +14,7 @@ angular.module('VideoDetailsModule')
             VideoDetails.getVideoDetails($scope.id).then(res => {
                 console.log(res);
                 $scope.data = res.data.items[0];
+                console.log($scope.data);
             }).catch(error => {
                 console.log(error);
             })
@@ -49,6 +50,11 @@ angular.module('VideoDetailsModule')
                 }
                 return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
             }
+            $scope.transformDate = function (date) {
+                let allDate = new Date(date).toUTCString();
+                let newDate = allDate.substring(allDate.indexOf(',') + 2, allDate.indexOf(':') - 3)
+                return newDate;
+            }
 
             $scope.loadMore = function () {
                 var vm = $scope;
@@ -56,12 +62,15 @@ angular.module('VideoDetailsModule')
                 $timeout(function () {
                     let incremented = vm.limit + 3;
                     vm.limit = incremented > vm.related.length ? vm.related.length : incremented;
-                    if(vm.limit === vm.related.length) {
+                    if (vm.limit === vm.related.length) {
                         vm.getSearched();
                         vm.limit += 3;
                     }
                     vm.spinning = false;
                 }, 1000);
+            }
+            $scope.goToChannelPage = function (id) {
+                $state.go('channelPage', { id: id });
             }
 
 

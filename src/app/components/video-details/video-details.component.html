@@ -30,6 +30,19 @@
             </div>
         </div>
         <hr>
+        <div class="row channel-data">
+            <div class="col-2">
+                <div class="img-color" ng-click="goToChannelPage(data.snippet.channelId)">
+                    {{ data.snippet.channelTitle[0].toUpperCase() }}
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="item">
+                    <p ng-click="goToChannelPage(data.snippet.channelId)">{{ data.snippet.channelTitle }}</p>
+                    <span>Publish At {{ transformDate(data.snippet.publishedAt) }}</span>
+                </div>
+            </div>
+        </div>
         <div class="row" ng-if="related">
             <div class="col-10" ng-repeat="item in related | limitTo:limit">
                         <app-card-video

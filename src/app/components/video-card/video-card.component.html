@@ -5,7 +5,7 @@
     <div class="video-right">
         <h4 class="title" ng-click="goToVideo($ctrl.item.id.videoId)">{{ $ctrl.snippet.title }}</h4>
         <div class="video-list">
-            <small class="item channel-title">{{ $ctrl.snippet.channelTitle }}</small>
+            <small class="item channel-title" ng-click="goToChannelPage($ctrl.snippet.channelId)" style="cursor: pointer;">{{ $ctrl.snippet.channelTitle }}</small>
             <small class="item video-published">{{ transformDate($ctrl.snippet.publishedAt) }}</small>
         </div>
         <small>{{ $ctrl.snippet.description }}</small>

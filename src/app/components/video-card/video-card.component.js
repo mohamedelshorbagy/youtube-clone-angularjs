@@ -13,6 +13,9 @@ angular.module('VideoCardModule')
             $scope.goToVideo = function (id) {
                 $state.go('videoPage', { id: id });
             }
+            $scope.goToChannelPage = function(id) {
+                $state.go('channelPage' , { id: id });
+            }
         },
         bindings: {
             snippet: '<',

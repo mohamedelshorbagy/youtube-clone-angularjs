@@ -101,6 +101,11 @@ body {
 
 .video-details {
     .container {
+        background-color: white;
+            hr {
+                border: 0.5px solid #DDD;
+                width: 96%;
+            }
             iframe {
                 width: 100%;
                 margin-left: 50%;
@@ -124,6 +129,42 @@ body {
             .row {
                 .col-10 {
                     margin-bottom: 15px;
+                }
+            }
+            .channel-data {
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+            .row {
+                .col-5 {
+                    .item {
+                        margin-top: 10px;
+                        p {
+                            margin:0;
+                            margin-bottom: 3px;
+                            &:hover {
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                    
+                }
+                .col-2 {
+                    .img-color {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: $green;
+                        width: 60px;
+                        height: 60px;
+                        cursor: pointer;
+                    }
                 }
             }
     }
